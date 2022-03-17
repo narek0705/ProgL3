@@ -1,0 +1,132 @@
+<html>
+
+<head>
+    <meta charset="utf8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Hind+Siliguri:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        canvas {
+            display: block;
+            margin: 0 auto;
+        }
+
+        div {
+            display: inline-block;
+        }
+
+        h1 {
+            padding: 20px;
+            text-align: center;
+        }
+
+        body {
+            font-family: 'Noto Sans', sans-serif !important;
+        }
+    </style>
+
+    <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-base.min.js"></script>
+
+</head>
+
+<body>
+
+
+
+    <table class="table-table-hover">
+        <thead class="thead">
+            <tr>
+                <h1>Ծրագրավորում III Երևան</h1>
+            </tr>
+            <tr>
+                <h1>Հակոբ Հարությունյան</h1>
+            </tr>
+            <tr id="First">
+                <th scope="col" >#</th>
+                <th scope="col" >Գույն</th>
+                <th scope="col" >Նկարագրություն</th>
+                <th scope="col" >Ծնվել է</th>
+            </tr>
+        </thead>
+        <tbody class="list">
+            <tr class="trs">
+                <th class="td" scope="row">1</th>
+                <td class="td" scope="row" style="background-color:green;"></td>
+                <td class="td">Կանաչը խոտն է, որը բազմանում է N ցիկլը մեկ,մահանում է երբ նրան ուտում է խոտակերը, կամ այրում է
+                    կրակը, կամ նրան կոխկրտում է գիշատիչը</td>
+                <td class="td" id="grassCount"></td>
+            </tr>
+            <tr class="trs">
+                <th scope="row">2</th>
+                <td scope="row" style="background-color:orange;"></td>
+                <td class="infoText">Դեղինը խոտակերն է, որը բազմանում է N հատ խոտ ուտելուց հետո և մահանում է N հատ չուտելուց հետո, կամ
+                    երբ նրան ուտում է գիշատիչը, կամ երբ նրան այրում է կրակը:</td>
+                <td id="grassEaterCount"></td>
+            </tr>
+            <tr class="trs">
+                <th scope="row">3</th>
+                <td scope="row" style="background-color:red;"></td>
+                <td class="infoText">Կարմիրը գիշատիչն է, որը բազմանում է ուտելով խոտակերներին,մահանում է երբ նրա էներգիան սպառվում է</td>
+                <td id="predCount"></td>
+            </tr>
+            <tr class="trs">
+                <th scope="row">4</th>
+                <td scope="row" style="background-color:cyan;"></td>
+                <td class="infoText">Սա Bomb Է վերացնում է խոտակերներին երբ խոտակեր է դիպչում իսկ երբ գիշատիչ վերացնում է գիշատիչներին</td>
+                <td id="bomberCount"></td>
+            </tr>
+            <tr class="trs">
+                <th scope="row">5</th>
+                <td scope="row" style="background-color:black;"></td>
+                <td class="infoText">Սև մարմինը իր կողքին ստեղծում է գիշատիչներ երբ իրեն գիշատիչ է դիպում իսկ երբ խոտակեր ստեղծում խոտակերներ</td>
+                <td id="blackCount"></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <div class="canvas-div">
+
+
+
+        <div class="ButtonPanel">
+
+            <div class="SeasonAndButtons">
+                <li class="drop">
+                    <p class="p">Change Season<i class="fas fa-angle-down"></i></p>
+                    <div class="droping">
+                        <p class="change-season" value ="Winter">Winter</p>
+                        <p class="change-season" value ="Spring">Spring</p>
+                        <p class="change-season" value ="Summer">Summer</p>
+                        <p class="change-season" value ="Autumn">Autumn</p>
+                    </div>
+                </li>
+
+                <div class="MainButtons">
+                    <div class="buttons">
+                        <h4>Events Panel</h4>
+                        <button class="btn" id="restart-button" onclick="restart()">Restart</button>
+                        <button class="btn" id ="AddGrass" onclick="addGrassEater()">Add Grass Eater</button>
+                    </div>
+                </div>
+            </div>
+            
+
+            <canvas id="countChart"></canvas>
+        </div>
+    </div>
+    
+    
+
+    <script src="p5.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

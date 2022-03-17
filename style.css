@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Hind+Siliguri:wght@300&family=Teko&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@600&display=swap');
+
+
+
+
+#First {
+    background-color: lightgrey;
+}
+
+:root{
+    --primary: rgba(rgb(102, 50, 50) , 0.1);
+    --secondary: rgba(rgb(241, 0, 0), 0.1);
+}
+
+.buttons{
+    padding: 2vh;
+    border-radius: 5px;
+    border: 2px solid lightgrey;
+
+    box-shadow: 5px 5px 0px 0px #535353, 10px 10px 0px 0px #747474, 15px 15px 0px 0px #919191, 20px 20px 0px 0px #c4c4c4, 25px 25px 0px 0px #dfdfdf, 5px 5px 15px 5px rgba(0,0,0,0);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons:nth-child(1){
+    letter-spacing: 1px;
+    font-family: 'Bebas Neue', cursive;
+    display: flex;
+    justify-self: center;
+    margin: none;
+}
+
+.MainButtons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10vh;
+    width: 120px;
+    margin-bottom: 10vh;
+    height: 200px;
+}
+
+.btn{
+    letter-spacing: 2px;
+    font-family: 'Teko', sans-serif;
+    padding: 5px 10px 5px 10px;
+    font-size: 25px;
+    color: white;
+    background-color: #ff815e;;
+    border: 2px solid #cc6a4f;;
+    cursor: pointer;
+    width: 20vh;
+    transition: 0.25s ;
+    user-select: none;
+    margin-top: 15px;
+}
+
+.btn:hover{
+    box-shadow: 0 6px 18px 0 rgba(#ff815e, 0.1);
+    color: #ff815e;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.table-table-hover{
+    height: 20vh;
+    width: 100%;
+}
+
+#countChart{
+    width: 75vh;
+    height: 100%;
+}
+
+.ButtonPanel{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.canvas-div {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+.drop {
+    padding: 15px 15px 0px 15px;
+    list-style-type: none;
+}
+
+.drop:hover .droping{
+    position:fixed;
+    height: fit-content;
+    opacity: 1;
+    transition: all .5s ease-in-out;
+  }
+
+.droping {
+    position: absolute;
+    overflow: hidden;
+    margin: 0px 10px 0px 0px;
+    padding: 5px;
+    opacity: 0;
+    height: 0px;
+    background-color: white;
+    min-width: 160px;
+    border: grey solid 1px;
+    border-radius: 7px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.p {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: 2px;
+    font-size: 20px;
+    border-bottom: 2px solid gray;
+}
+
+.droping{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.droping  p {
+    font-family: 'Maven Pro', sans-serif;
+    color: black;
+    padding: 12px 12px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    cursor:pointer;
+    transition: all 0.2s ease-in-out
+  }
+
+.droping  p:hover {
+    color: black;
+    background-color: #d9d9d9;
+    padding: 12px 12px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    cursor:pointer;
+  }
+
+  .SeasonAndButtons {
+      padding: 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+  }
