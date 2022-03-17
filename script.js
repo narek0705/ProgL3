@@ -9,7 +9,7 @@ function setup() {
 
     var matrix = [];
 
-    
+
     const seasonChangerArray = document.querySelectorAll(".change-season")
 
     let grassCountElement = document.getElementById('grassCount');
@@ -17,7 +17,7 @@ function setup() {
     let predatorCountElement = document.getElementById('predCount');
     let bomberCountElement = document.getElementById('bomberCount');
     let blackCountElement = document.getElementById('blackCount');
-    var season = {Grass: "#1A921B" ,Herbivore : "#ffed82" ,Predator : "#ff4638" ,Human: "#212121"};
+    var season = { Grass: "#1A921B", Herbivore: "#ffed82", Predator: "#ff4638", Human: "#212121" };
 
 
     socket.on("data", drawCreatures);
@@ -27,43 +27,43 @@ function setup() {
     })
 
     socket.on("chart", (data) => {
-        if(i == 0){
+        if (i == 0) {
             i++;
             Mychart = new Chart(document.querySelector("#countChart"), {
-                type:"bar",
+                type: "bar",
                 data: data.data,
                 options: {
-                            scales: {
-                                y: {
-                                    beginAtZero: true,
-                                    ticks: {
-                                        font: {
-                                            size: 30
-                                        }
-                                    }
-                                },
-                                x: {
-                                    ticks: {
-                                        font: {
-                                            size: 20
-                                        }
-                                    }
-                                },
-                            },
-                            responsive: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                font: {
+                                    size: 30
+                                }
+                            }
                         },
-                    plugins: [plugin = {
-                        id: 'custom_canvas_background_color',
-                        beforeDraw: (chart) => {
-                          const ctx = chart.canvas.getContext('2d');
-                          ctx.save();
-                          ctx.globalCompositeOperation = 'destination-over';
-                          ctx.fillStyle = 'white';
-                          ctx.fillRect(0, 0, chart.width, chart.height);
-                          ctx.restore();
-                        }
-                      }]
-                });
+                        x: {
+                            ticks: {
+                                font: {
+                                    size: 20
+                                }
+                            }
+                        },
+                    },
+                    responsive: false,
+                },
+                plugins: [plugin = {
+                    id: 'custom_canvas_background_color',
+                    beforeDraw: (chart) => {
+                        const ctx = chart.canvas.getContext('2d');
+                        ctx.save();
+                        ctx.globalCompositeOperation = 'destination-over';
+                        ctx.fillStyle = 'white';
+                        ctx.fillRect(0, 0, chart.width, chart.height);
+                        ctx.restore();
+                    }
+                }]
+            });
         } else {
             Mychart.data.datasets[0].data = data.data.datasets[0].data;
             Mychart.update();
@@ -85,7 +85,7 @@ function setup() {
             document.querySelector(".canvas-div").appendChild(document.querySelector("#defaultCanvas0"))
             CanvasCreation = true
         }
-        
+
 
         socket.emit("changeChart")
 
@@ -93,7 +93,7 @@ function setup() {
 
         for (var i = 0; i < matrix.length; i++) {
             for (var j = 0; j < matrix[i].length; j++) {
-                if (matrix[i][j] == 1)      fill(season.Grass);
+                if (matrix[i][j] == 1) fill(season.Grass);
                 else if (matrix[i][j] == 2) fill(season.Herbivore);
                 else if (matrix[i][j] == 3) fill(season.Predator);
                 else if (matrix[i][j] == 4) fill("cyan");
@@ -103,10 +103,10 @@ function setup() {
             }
         }
 
-        
+
         seasonChangerArray.forEach(seasonButton => {
             seasonButton.addEventListener("click", () => {
-                socket.emit("changeSeason", seasonButton.getAttribute("value") );
+                socket.emit("changeSeason", seasonButton.getAttribute("value"));
             })
         });
     }
@@ -115,7 +115,7 @@ function setup() {
 function restart() {
     let restart = document.querySelector("#restart-button")
     restart.addEventListener("click", socket.emit("restart"))
-    
+
 }
 function addGrassEater() {
     let restart = document.querySelector("#AddGrass")
