@@ -95,12 +95,10 @@
 .drop {
     padding: 15px 15px 0px 15px;
     list-style-type: none;
-    /* add new css */
     height: 60px;
 }
 
 .drop:hover .droping{
-    /* change css *//* position:fixed; */
     height: fit-content;
     opacity: 1;
     transition: all .5s ease-in-out;
