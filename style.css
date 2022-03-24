@@ -48,7 +48,7 @@
     font-family: 'Teko', sans-serif;
     padding: 5px 10px 5px 10px;
     font-size: 25px;
-    color: white;
+    color: #fff;
     background-color: #bd2130;
     border: 2px solid #bd2130;
     cursor: pointer;
@@ -59,8 +59,8 @@
 }
 
 .btn:hover{
-    box-shadow: 0 6px 18px 0 rgba(#ff815e, 0.1);
-    color: #ff815e;
+    box-shadow: 0 6px 18px 0 rgba(#46949c, 0.1);
+    color: #cfbd63;
     border-color: transparent;
     background-color: transparent;
 }
