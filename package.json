@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Hakob2005/Test.git"
+    "url": "git+https://github.com/narek0705/ProgL3.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Hakob2005/Test/issues"
+    "url": "https://github.com/narek0705/ProgL3/issues"
   },
-  "homepage": "https://github.com/Hakob2005/Test#readme",
+  "homepage": "https://github.com/narek0705/ProgL3#readme",
   "dependencies": {
     "chart.js": "^3.5.1",
     "express": "^4.17.1",

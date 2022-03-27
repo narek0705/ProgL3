@@ -16,7 +16,7 @@
     border-radius: 5px;
     border: 2px solid lightgrey;
     background-image: radial-gradient( circle 1084px at 0.8% 97.8%,  rgba(7,3,98,1) 0%, rgba(179,26,132,1) 52%, rgba(231,177,81,1) 100.2% );
-    box-shadow: 5px 5px 0px 0px #5c51a6, 10px 10px 0px 0px #423882, 15px 15px 0px 0px #534a87, 20px 20px 0px 0px #625b8c, 25px 25px 0px 0px #6d688c, 5px 5px 15px 5px rgba(0,0,0,0);
+    box-shadow: 5px 5px 0px 0px #423882, 10px 10px 0px 0px #534a87, 15px 15px 0px 0px #5c51a6, 20px 20px 0px 0px #625b8c, 5px 5px 15px 5px rgba(0,0,0,0);
 
     display: flex;
     flex-direction: column;
